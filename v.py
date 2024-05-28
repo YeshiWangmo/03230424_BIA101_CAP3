@@ -29,3 +29,41 @@
 
 
 
+# Read the input.txt file
+def read_input(file_name):
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
+    return lines
+
+# Extract first and last digit from the line and form a two-digit number
+def extract_numbers_from_line(line):
+    first_digit = None
+    last_digit = None
+    for char in line:
+        if char.isdigit():
+            if first_digit is None:
+                first_digit = char
+            last_digit = char
+    if first_digit and last_digit:
+        return int(first_digit + last_digit)
+    return None
+
+# Solution to calculate the total sum
+def calculate_total_sum(lines):
+    total_sum = 0
+    for i, line in enumerate(lines, 1):
+        number = extract_numbers_from_line(line.strip())
+        if number is not None:
+            print(f"Line {i}’s number is: {number}")
+            total_sum += number
+    return total_sum
+
+# Print the solution
+def print_solution(file_name):
+    lines = read_input(file_name)
+    total_sum = calculate_total_sum(lines)
+    print(f"The total sum from the given input file {file_name} is {total_sum}")
+
+# Example usage
+file_name = '424.txt'
+print_solution(file_name)
