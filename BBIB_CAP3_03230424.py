@@ -57,7 +57,7 @@ def read_input(file_path):
 
 def print_solution(file_path):
     total_sum = read_input(file_path)
-    print(f"The total sum from the given input file {file_path} is {total_sum}")
+    print(f"The total sum from the 424.txt file {file_path} is {total_sum}")
 
 
 file_path = '424.txt'  
