@@ -1,5 +1,5 @@
 ################################
-# Github Repo link
+# https://github.com/YeshiWangmo/03230424_BIA101_CAP3
 # Yeshi Wangmo
 # BBI "B"
 # 03230424
